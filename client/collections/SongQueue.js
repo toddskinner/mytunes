@@ -1,7 +1,10 @@
 // SongQueue.js - Defines a backbone model class for the song queue.
-var SongQueue = Songs.extend({
+var SongQueue = Backbone.Collection.extend({
+
+  model: Songs,
 
   initialize: function(){
+
   }
 
 });
