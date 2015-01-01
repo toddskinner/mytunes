@@ -4,17 +4,22 @@ var SongQueueEntryView = Backbone.View.extend({
                        <div class="title"><%= title %></div> \
                        </div>'),
 
-  event : {
-    'click' : 'enqueue'
+  events: {
+    'click' : 'enqueue',
+    'play' : 'dequeue',
   },
 
   enqueue : function() {
     this.model.enqueue();
-    this.add
+    // this.add
   },
 
   render: function() {
     this.$el.html(this.template(this.model));
+  },
+
+  dequeue: function() {
+    this.model.dequeue();
   }
 
 
